@@ -11,17 +11,13 @@ namespace Escola.Application.Comandos
 {
     public class AdicionarAlunoComando : Notifiable<Notification>, IComando
     {
-        public AdicionarAlunoComando(string nome, string sobrenome, string email, DateTime dataNascimento, Guid escolaridadeId, IFormFile historicoEscolarImagem)
+        public AdicionarAlunoComando(string nome, string sobrenome, string email, DateTime dataNascimento, Guid escolaridadeId)
         {
             Nome = nome;
             Sobrenome = sobrenome;
             Email = email;
             DataNascimento = dataNascimento;
             EscolaridadeId = escolaridadeId;
-            HistoricoEscolarImagem = historicoEscolarImagem;
-
-            ValidarHistoricoEscolarImagem(historicoEscolarImagem);
-            AddNotifications(new AdicionarAlunoContrato(this));
         }
 
         public string Nome { get; set; }
@@ -51,5 +47,12 @@ namespace Escola.Application.Comandos
             formFileDTO != null &&
             (formFileDTO.FormatoArquivo.Contains(FormatoHistoricoEnum.Doc.ObterDescricaoEnum())
              || formFileDTO.FormatoArquivo.Contains(FormatoHistoricoEnum.Pdf.ObterDescricaoEnum()));
+
+        public void AdicionarHistoricoEscolarImagem(IFormFile historicoEscolar)
+        {
+            HistoricoEscolarImagem = historicoEscolar;
+            ValidarHistoricoEscolarImagem(historicoEscolar);
+            AddNotifications(new AdicionarAlunoContrato(this));
+        }
     }
 }

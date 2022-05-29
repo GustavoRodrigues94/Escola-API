@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pBnurYZsxp3O9gKXMXWJXj4rdZhO0lcL47Kjffz37qPY0TVWuKS/5Zr859k6JvvRGVIuU5vanV9bjpyJYksHhQ==",
+  "dgSpecHash": "wu2/bgYqS2vbJoH13HwCUtArOCUtLILld/Blkaa8de2cjIcyv/T+sYgY52a2aUsF1pJ8eSnrfKCYx+eK3mfREw==",
   "success": true,
-  "projectFilePath": "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.Application\\Escola.Application.csproj",
+  "projectFilePath": "D:\\Projetos\\Escola\\backend\\src\\Escola.Application\\Escola.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gustavo\\.nuget\\packages\\flunt\\2.0.5\\flunt.2.0.5.nupkg.sha512",
     "C:\\Users\\Gustavo\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.16\\microsoft.aspnetcore.http.features.5.0.16.nupkg.sha512",

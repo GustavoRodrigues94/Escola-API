@@ -14,5 +14,7 @@ namespace Escola.Domain.Repositorios
 
         Task<Aluno> ObterAlunoPorId(Guid alunoId);
         IQueryable<Aluno> ObterAlunos();
+
+        IQueryable<Escolaridade> ObterListaEscolaridade();
     }
 }

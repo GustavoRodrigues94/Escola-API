@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ldhm8u7O1RpbCUFtx9x7i95F5g5RH3culc4La7nOOcnCf1Tel1OTxKWk8i9MUMDD91BzJS2ubVDRXcEwgmvA9w==",
+  "dgSpecHash": "Gx4VFWZFs/EPzQX0b2qef95qy2W/T+RylU9jWD2MBk9EyGiMfGdnG4XMruGvoBTIuS7UxzQblt2k60TtUs5aYw==",
   "success": true,
-  "projectFilePath": "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.Infra\\Escola.Infra.csproj",
+  "projectFilePath": "D:\\Projetos\\Escola\\backend\\src\\Escola.Infra\\Escola.Infra.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gustavo\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Gustavo\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.16\\microsoft.aspnetcore.http.features.5.0.16.nupkg.sha512",

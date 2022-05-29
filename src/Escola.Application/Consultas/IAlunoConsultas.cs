@@ -9,5 +9,6 @@ namespace Escola.Application.Consultas
     {
         Task<AlunoViewModel> ObterAlunoPorId(Guid alunoId);
         Task<IEnumerable<AlunoViewModel>> ObterAlunos();
+        Task<IEnumerable<EscolaridadeViewModel>> ObterListaEscolaridade();
     }
 }

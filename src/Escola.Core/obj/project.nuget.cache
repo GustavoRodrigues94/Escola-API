@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mmx+te+r0a59XqtkUNbWJLWf+wu1wRWlfttKA3htBm3uHpHz1D/t/uHwV1qOD50q31ei5j+0sGiHEPtOlQHlOg==",
+  "dgSpecHash": "DQEsLUFIwRkLATRQtcidqj/ZyDqejZ2osLZDGY54KiVrrW6QLvQUPg6jabVI3VZRkpULQEzhmmxDbrRfBMSn4g==",
   "success": true,
-  "projectFilePath": "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.Core\\Escola.Core.csproj",
+  "projectFilePath": "D:\\Projetos\\Escola\\backend\\src\\Escola.Core\\Escola.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gustavo\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.16\\microsoft.aspnetcore.http.features.5.0.16.nupkg.sha512",
     "C:\\Users\\Gustavo\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",

@@ -10,6 +10,7 @@ namespace Escola.Infra.Contexto
         public EscolaContexto(DbContextOptions opcoes) : base(opcoes) { }
 
         public DbSet<Aluno> Aluno { get; set; }
+        public DbSet<Escolaridade> Escolaridade { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

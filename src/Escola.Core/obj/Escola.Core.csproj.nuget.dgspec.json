@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.Core\\Escola.Core.csproj": {}
+    "D:\\Projetos\\Escola\\backend\\src\\Escola.Core\\Escola.Core.csproj": {}
   },
   "projects": {
-    "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.Core\\Escola.Core.csproj": {
+    "D:\\Projetos\\Escola\\backend\\src\\Escola.Core\\Escola.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.Core\\Escola.Core.csproj",
+        "projectUniqueName": "D:\\Projetos\\Escola\\backend\\src\\Escola.Core\\Escola.Core.csproj",
         "projectName": "Escola.Core",
-        "projectPath": "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.Core\\Escola.Core.csproj",
+        "projectPath": "D:\\Projetos\\Escola\\backend\\src\\Escola.Core\\Escola.Core.csproj",
         "packagesPath": "C:\\Users\\Gustavo\\.nuget\\packages\\",
-        "outputPath": "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.Core\\obj\\",
+        "outputPath": "D:\\Projetos\\Escola\\backend\\src\\Escola.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

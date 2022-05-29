@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.API\\Escola.API.csproj": {}
+    "D:\\Projetos\\Escola\\backend\\src\\Escola.API\\Escola.API.csproj": {}
   },
   "projects": {
-    "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.API\\Escola.API.csproj": {
+    "D:\\Projetos\\Escola\\backend\\src\\Escola.API\\Escola.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.API\\Escola.API.csproj",
+        "projectUniqueName": "D:\\Projetos\\Escola\\backend\\src\\Escola.API\\Escola.API.csproj",
         "projectName": "Escola.API",
-        "projectPath": "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.API\\Escola.API.csproj",
+        "projectPath": "D:\\Projetos\\Escola\\backend\\src\\Escola.API\\Escola.API.csproj",
         "packagesPath": "C:\\Users\\Gustavo\\.nuget\\packages\\",
-        "outputPath": "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.API\\obj\\",
+        "outputPath": "D:\\Projetos\\Escola\\backend\\src\\Escola.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -31,11 +31,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.Application\\Escola.Application.csproj": {
-                "projectPath": "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.Application\\Escola.Application.csproj"
+              "D:\\Projetos\\Escola\\backend\\src\\Escola.Application\\Escola.Application.csproj": {
+                "projectPath": "D:\\Projetos\\Escola\\backend\\src\\Escola.Application\\Escola.Application.csproj"
               },
-              "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.Infra\\Escola.Infra.csproj": {
-                "projectPath": "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.Infra\\Escola.Infra.csproj"
+              "D:\\Projetos\\Escola\\backend\\src\\Escola.Infra\\Escola.Infra.csproj": {
+                "projectPath": "D:\\Projetos\\Escola\\backend\\src\\Escola.Infra\\Escola.Infra.csproj"
               }
             }
           }
@@ -50,6 +50,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -59,6 +63,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[5.0.17, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -87,14 +95,14 @@
         }
       }
     },
-    "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.Application\\Escola.Application.csproj": {
+    "D:\\Projetos\\Escola\\backend\\src\\Escola.Application\\Escola.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.Application\\Escola.Application.csproj",
+        "projectUniqueName": "D:\\Projetos\\Escola\\backend\\src\\Escola.Application\\Escola.Application.csproj",
         "projectName": "Escola.Application",
-        "projectPath": "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.Application\\Escola.Application.csproj",
+        "projectPath": "D:\\Projetos\\Escola\\backend\\src\\Escola.Application\\Escola.Application.csproj",
         "packagesPath": "C:\\Users\\Gustavo\\.nuget\\packages\\",
-        "outputPath": "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.Application\\obj\\",
+        "outputPath": "D:\\Projetos\\Escola\\backend\\src\\Escola.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -114,11 +122,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.Core\\Escola.Core.csproj": {
-                "projectPath": "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.Core\\Escola.Core.csproj"
+              "D:\\Projetos\\Escola\\backend\\src\\Escola.Core\\Escola.Core.csproj": {
+                "projectPath": "D:\\Projetos\\Escola\\backend\\src\\Escola.Core\\Escola.Core.csproj"
               },
-              "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.Domain\\Escola.Domain.csproj": {
-                "projectPath": "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.Domain\\Escola.Domain.csproj"
+              "D:\\Projetos\\Escola\\backend\\src\\Escola.Domain\\Escola.Domain.csproj": {
+                "projectPath": "D:\\Projetos\\Escola\\backend\\src\\Escola.Domain\\Escola.Domain.csproj"
               }
             }
           }
@@ -165,14 +173,14 @@
         }
       }
     },
-    "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.Core\\Escola.Core.csproj": {
+    "D:\\Projetos\\Escola\\backend\\src\\Escola.Core\\Escola.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.Core\\Escola.Core.csproj",
+        "projectUniqueName": "D:\\Projetos\\Escola\\backend\\src\\Escola.Core\\Escola.Core.csproj",
         "projectName": "Escola.Core",
-        "projectPath": "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.Core\\Escola.Core.csproj",
+        "projectPath": "D:\\Projetos\\Escola\\backend\\src\\Escola.Core\\Escola.Core.csproj",
         "packagesPath": "C:\\Users\\Gustavo\\.nuget\\packages\\",
-        "outputPath": "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.Core\\obj\\",
+        "outputPath": "D:\\Projetos\\Escola\\backend\\src\\Escola.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -228,14 +236,14 @@
         }
       }
     },
-    "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.Domain\\Escola.Domain.csproj": {
+    "D:\\Projetos\\Escola\\backend\\src\\Escola.Domain\\Escola.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.Domain\\Escola.Domain.csproj",
+        "projectUniqueName": "D:\\Projetos\\Escola\\backend\\src\\Escola.Domain\\Escola.Domain.csproj",
         "projectName": "Escola.Domain",
-        "projectPath": "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.Domain\\Escola.Domain.csproj",
+        "projectPath": "D:\\Projetos\\Escola\\backend\\src\\Escola.Domain\\Escola.Domain.csproj",
         "packagesPath": "C:\\Users\\Gustavo\\.nuget\\packages\\",
-        "outputPath": "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.Domain\\obj\\",
+        "outputPath": "D:\\Projetos\\Escola\\backend\\src\\Escola.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -255,8 +263,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.Core\\Escola.Core.csproj": {
-                "projectPath": "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.Core\\Escola.Core.csproj"
+              "D:\\Projetos\\Escola\\backend\\src\\Escola.Core\\Escola.Core.csproj": {
+                "projectPath": "D:\\Projetos\\Escola\\backend\\src\\Escola.Core\\Escola.Core.csproj"
               }
             }
           }
@@ -289,14 +297,14 @@
         }
       }
     },
-    "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.Infra\\Escola.Infra.csproj": {
+    "D:\\Projetos\\Escola\\backend\\src\\Escola.Infra\\Escola.Infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.Infra\\Escola.Infra.csproj",
+        "projectUniqueName": "D:\\Projetos\\Escola\\backend\\src\\Escola.Infra\\Escola.Infra.csproj",
         "projectName": "Escola.Infra",
-        "projectPath": "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.Infra\\Escola.Infra.csproj",
+        "projectPath": "D:\\Projetos\\Escola\\backend\\src\\Escola.Infra\\Escola.Infra.csproj",
         "packagesPath": "C:\\Users\\Gustavo\\.nuget\\packages\\",
-        "outputPath": "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.Infra\\obj\\",
+        "outputPath": "D:\\Projetos\\Escola\\backend\\src\\Escola.Infra\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -316,11 +324,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.Core\\Escola.Core.csproj": {
-                "projectPath": "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.Core\\Escola.Core.csproj"
+              "D:\\Projetos\\Escola\\backend\\src\\Escola.Core\\Escola.Core.csproj": {
+                "projectPath": "D:\\Projetos\\Escola\\backend\\src\\Escola.Core\\Escola.Core.csproj"
               },
-              "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.Domain\\Escola.Domain.csproj": {
-                "projectPath": "D:\\Projetos\\Escola\\backend\\Escola\\src\\Escola.Domain\\Escola.Domain.csproj"
+              "D:\\Projetos\\Escola\\backend\\src\\Escola.Domain\\Escola.Domain.csproj": {
+                "projectPath": "D:\\Projetos\\Escola\\backend\\src\\Escola.Domain\\Escola.Domain.csproj"
               }
             }
           }

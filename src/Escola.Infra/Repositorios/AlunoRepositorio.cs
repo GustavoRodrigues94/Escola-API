@@ -38,6 +38,10 @@ namespace Escola.Infra.Repositorios
                 .Include(x => x.Escolaridade)
                 .AsQueryable();
 
+        public IQueryable<Escolaridade> ObterListaEscolaridade() =>
+            _contexto.Escolaridade
+                .AsNoTrackingWithIdentityResolution()
+                .AsQueryable();
 
         public void Dispose() => _contexto?.Dispose();
     }

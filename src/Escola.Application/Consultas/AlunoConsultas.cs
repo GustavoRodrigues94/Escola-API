@@ -72,5 +72,13 @@ namespace Escola.Application.Consultas
                     EscolaridadeDescricao = aluno.Escolaridade.EscolaridadeTipo.ObterDescricaoEnum()
                 }
             }).ToListAsync();
+
+        public async Task<IEnumerable<EscolaridadeViewModel>> ObterListaEscolaridade() => await _alunoRepositorio
+            .ObterListaEscolaridade().Select(escolaridade => new EscolaridadeViewModel
+            {
+                Id = escolaridade.Id,
+                EscolaridadeDescricao = escolaridade.EscolaridadeTipo.ObterDescricaoEnum(),
+                EscolaridadeEnum = escolaridade.EscolaridadeTipo
+            }).ToListAsync();
     }
 }

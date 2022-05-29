@@ -32,6 +32,7 @@ namespace Escola.Application.Manipuladores
                 ? new ComandoResultado(true, "Sucesso ao adicionar aluno", aluno)
                 : new ComandoResultado(false, "Ocorreu um erro ao adicionar aluno", null);
         }
+
         public async Task<ComandoResultado> Manipular(AtualizarAlunoComando comando)
         {
             var aluno = await _alunoRepositorio.ObterAlunoPorId(comando.AlunoId);

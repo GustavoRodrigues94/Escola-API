@@ -4,7 +4,7 @@ namespace Escola.Domain.Enums
 {
     public enum FormatoHistoricoEnum
     {
-        [Description("PDF")] Pdf,
-        [Description("DOC")] Doc
+        [Description(".pdf")] Pdf,
+        [Description(".docx")] Doc
     }
 }
