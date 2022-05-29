@@ -46,9 +46,13 @@ namespace Escola.API.Controllers
         [HttpPut]
         [AllowAnonymous]
         public async Task<IActionResult> AtualizarAluno(
-            [FromBody] AtualizarAlunoComando comando,
+            IFormFile historicoEscolar,
+            [FromForm] string jsonAluno,
             [FromServices] AlunoComandoManipulador manipulador)
         {
+            var comando = JsonConvert.DeserializeObject<AtualizarAlunoComando>(jsonAluno);
+            comando.AdicionarHistoricoEscolarImagem(historicoEscolar);
+
             if (!comando.IsValid)
                 return BadRequest(comando.Notifications);
 

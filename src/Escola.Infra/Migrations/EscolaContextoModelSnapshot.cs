@@ -35,9 +35,6 @@ namespace Escola.Infra.Migrations
                     b.Property<Guid>("EscolaridadeId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("HistoricoEscolarId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasColumnType("varchar(150)");
@@ -49,8 +46,6 @@ namespace Escola.Infra.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("EscolaridadeId");
-
-                    b.HasIndex("HistoricoEscolarId");
 
                     b.ToTable("Aluno");
                 });
@@ -98,6 +93,9 @@ namespace Escola.Infra.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid>("AlunoId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("Formato")
                         .IsRequired()
                         .HasColumnType("varchar(20)");
@@ -112,6 +110,9 @@ namespace Escola.Infra.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("AlunoId")
+                        .IsUnique();
+
                     b.ToTable("HistoricoEscolar");
                 });
 
@@ -123,23 +124,26 @@ namespace Escola.Infra.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Escola.Domain.Entidades.HistoricoEscolar", "HistoricoEscolar")
-                        .WithMany("Alunos")
-                        .HasForeignKey("HistoricoEscolarId")
+                    b.Navigation("Escolaridade");
+                });
+
+            modelBuilder.Entity("Escola.Domain.Entidades.HistoricoEscolar", b =>
+                {
+                    b.HasOne("Escola.Domain.Entidades.Aluno", "Aluno")
+                        .WithOne("HistoricoEscolar")
+                        .HasForeignKey("Escola.Domain.Entidades.HistoricoEscolar", "AlunoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Escolaridade");
+                    b.Navigation("Aluno");
+                });
 
+            modelBuilder.Entity("Escola.Domain.Entidades.Aluno", b =>
+                {
                     b.Navigation("HistoricoEscolar");
                 });
 
             modelBuilder.Entity("Escola.Domain.Entidades.Escolaridade", b =>
-                {
-                    b.Navigation("Alunos");
-                });
-
-            modelBuilder.Entity("Escola.Domain.Entidades.HistoricoEscolar", b =>
                 {
                     b.Navigation("Alunos");
                 });

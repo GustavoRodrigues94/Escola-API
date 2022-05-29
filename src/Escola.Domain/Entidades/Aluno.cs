@@ -28,14 +28,12 @@ namespace Escola.Domain.Entidades
         public Guid EscolaridadeId { get; private set; }
         public Escolaridade Escolaridade { get; private set; }
 
-        public Guid HistoricoEscolarId { get; private set; }
         public HistoricoEscolar HistoricoEscolar { get; private set; }
 
         private void AdicionarHistoricoEscolar(string nomeHistoricoEscolar, FormatoHistoricoEnum formatoHistoricoEscolar, string historicoEscolarBase64)
         {
-            var historicoEscolar = new HistoricoEscolar(nomeHistoricoEscolar, formatoHistoricoEscolar, historicoEscolarBase64);
+            var historicoEscolar = new HistoricoEscolar(nomeHistoricoEscolar, formatoHistoricoEscolar, historicoEscolarBase64, Id);
             HistoricoEscolar = historicoEscolar;
-            HistoricoEscolarId = historicoEscolar.Id;
         }
 
         public void Atualizar(string nome, string sobrenome, string email, DateTime dataNascimento, Guid escolaridadeId,
@@ -46,6 +44,8 @@ namespace Escola.Domain.Entidades
             Email = email;
             DataNascimento = dataNascimento;
             EscolaridadeId = escolaridadeId;
+
+            if (string.IsNullOrEmpty(historicoEscolarBase64)) return;
 
             AtualizarHistoricoEscolar(nomeHistoricoEscolar, formatoHistoricoEscolar, historicoEscolarBase64);
         }

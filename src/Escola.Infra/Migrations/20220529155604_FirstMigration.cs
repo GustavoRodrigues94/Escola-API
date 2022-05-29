@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Escola.Infra.Migrations
 {
-    public partial class firstmigration : Migration
+    public partial class FirstMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -20,20 +20,6 @@ namespace Escola.Infra.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "HistoricoEscolar",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Nome = table.Column<string>(type: "varchar(150)", nullable: false),
-                    Formato = table.Column<string>(type: "varchar(20)", nullable: false),
-                    HistoricoBase64 = table.Column<string>(type: "varchar(MAX)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_HistoricoEscolar", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Aluno",
                 columns: table => new
                 {
@@ -42,8 +28,7 @@ namespace Escola.Infra.Migrations
                     Sobrenome = table.Column<string>(type: "varchar(150)", nullable: false),
                     Email = table.Column<string>(type: "varchar(150)", nullable: false),
                     DataNascimento = table.Column<DateTime>(type: "date", nullable: false),
-                    EscolaridadeId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    HistoricoEscolarId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    EscolaridadeId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -54,10 +39,25 @@ namespace Escola.Infra.Migrations
                         principalTable: "Escolaridade",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "HistoricoEscolar",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Nome = table.Column<string>(type: "varchar(150)", nullable: false),
+                    Formato = table.Column<string>(type: "varchar(20)", nullable: false),
+                    HistoricoBase64 = table.Column<string>(type: "varchar(MAX)", nullable: false),
+                    AlunoId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_HistoricoEscolar", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Aluno_HistoricoEscolar_HistoricoEscolarId",
-                        column: x => x.HistoricoEscolarId,
-                        principalTable: "HistoricoEscolar",
+                        name: "FK_HistoricoEscolar_Aluno_AlunoId",
+                        column: x => x.AlunoId,
+                        principalTable: "Aluno",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -79,21 +79,22 @@ namespace Escola.Infra.Migrations
                 column: "EscolaridadeId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Aluno_HistoricoEscolarId",
-                table: "Aluno",
-                column: "HistoricoEscolarId");
+                name: "IX_HistoricoEscolar_AlunoId",
+                table: "HistoricoEscolar",
+                column: "AlunoId",
+                unique: true);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "HistoricoEscolar");
+
+            migrationBuilder.DropTable(
                 name: "Aluno");
 
             migrationBuilder.DropTable(
                 name: "Escolaridade");
-
-            migrationBuilder.DropTable(
-                name: "HistoricoEscolar");
         }
     }
 }

@@ -9,7 +9,7 @@ namespace Escola.Core.Utilitarios
     {
         public static FormFileDTO ObterFormFileDetalhes(IFormFile formFile)
         {
-            if (formFile.Length <= 0) return null;
+            if (formFile is null || formFile?.Length <= 0) return null;
 
             var formFileDTO = new FormFileDTO
             {
