@@ -21,9 +21,9 @@ namespace Escola.Infra.Repositorios
 
         public void AdicionarAluno(Aluno aluno) => _contexto.Aluno.Add(aluno);
 
-        public void AtualizarAluno(Aluno aluno) => _contexto.Update(aluno);
+        public void AtualizarAluno(Aluno aluno) => _contexto.Aluno.Update(aluno);
 
-        public void RemoverAluno(Aluno aluno) => _contexto.Remove(aluno);
+        public void RemoverAluno(Aluno aluno) => _contexto.Aluno.Remove(aluno);
 
         public async Task<Aluno> ObterAlunoPorId(Guid alunoId) =>
             await _contexto.Aluno
